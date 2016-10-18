@@ -1,0 +1,39 @@
+* {
+  box-model: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+.main-content {
+	width: 100%;
+	height: auto;
+	display: block;
+	overflow-x: hidden;
+}
+
+.main-content:after,
+.main-content::after,
+p:after,
+p::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+p {
+	height: auto;
+	overflow: visible;
+
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 1.5;
+	word-wrap: break-word;
+}
