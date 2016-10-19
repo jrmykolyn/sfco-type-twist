@@ -19,15 +19,7 @@ $( document ).ready( function() {
 		};
 
 		// Define `settings` based on `options` and/or `defaults`.
- 		var settings = {
-			'color': options['color'] || defaults['color'],
-			'background': options['background'] || defaults['background'],
-			'background-color': options['background-color'] || defaults['background-color'],
-			'margin': options['margin'] || defaults['margin'],
-			'padding': options['padding'] || defaults['padding'],
-			'box-shadow': options['box-shadow'] || defaults['box-shadow'],
-			'text-shadow': options['text-shadow'] || defaults['text-shadow'],
-		}
+		var settings = buildSettingsObj( options, defaults );
 
 
 		// --------------------------------------------------
@@ -108,6 +100,17 @@ $( document ).ready( function() {
 			}
 
 			return hexCode;
+		}
+
+
+		function buildSettingsObj( options, defaults ) {
+			var output = {};
+
+			for ( var prop in defaults ) {
+				output[prop] = options[prop] || defaults[prop];
+			}
+
+			return output;
 		}
 	})( {
 			'hexSeed': '',
