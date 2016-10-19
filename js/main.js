@@ -13,6 +13,7 @@ $( document ).ready( function() {
 			'background': '',
 			'background-color': '',
 			'padding': '0px 20px',
+			'margin': '0px 5px',
 			'box-shadow': '',
 			'text-shadow': ''
 		};
@@ -22,6 +23,7 @@ $( document ).ready( function() {
 			'color': options['color'] || defaults['color'],
 			'background': options['background'] || defaults['background'],
 			'background-color': options['background-color'] || defaults['background-color'],
+			'margin': options['margin'] || defaults['margin'],
 			'padding': options['padding'] || defaults['padding'],
 			'box-shadow': options['box-shadow'] || defaults['box-shadow'],
 			'text-shadow': options['text-shadow'] || defaults['text-shadow'],
@@ -112,6 +114,8 @@ $( document ).ready( function() {
 			'color': 'white',
 			'background-color': 'blue',
 			'text-shadow': '0px 1px 1px rgba(0,0,0,0.5)',
-			'box-shadow': '0px 1px 1px rgba(0,0,0,0.5)'
+			'box-shadow': '0px 1px 1px rgba(0,0,0,0.5)',
+			'margin': '0px 25px',
+			'padding': '50px'
 	} );
 } );
